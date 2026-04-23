@@ -1,16 +1,18 @@
 import { getWalkers } from "./database.js"
 
-const walkers = getWalkers()
-
+const walkerss = getWalkers()
 
 export const Walkers = () => {
     let walkerHTML = "<ul>"
 
-    for (const walker of walkers) {
-        walkerHTML += `<li>${walker.fullName}</li>`
+    for (const walker of walkerss ) {
+        walkerHTML += 
+        `<li>${walker.name}</li>`
     }
 
     walkerHTML += "</ul>"
 
+    return walkerHTML
 }
 
+console.log(walkerss)
